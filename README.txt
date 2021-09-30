@@ -1,0 +1,1 @@
+Very simple code required by class.
