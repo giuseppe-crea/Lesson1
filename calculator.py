@@ -22,6 +22,9 @@ def divide(m, n):
         raise ValueError('Not an int')
     if n < 0:
         sign = -1
+    if m < 0:
+        sign = -sign
+        m = -m
     while m > 0:
         m -= abs(n)
         i += 1
@@ -42,6 +45,8 @@ try:
 except ValueError as e:
     print("12 / 3.1: " + str(e))
 print("12 / -3: " + str(divide(12, -3)))
+print("-12 / -3: " + str(divide(-12, -3)))
+print("-12 / 3: " + str(divide(12, 3)))
 try:
     print("12 / 0: " + str(divide(12, 0)))
 except ValueError as e:
